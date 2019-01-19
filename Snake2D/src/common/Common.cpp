@@ -11,6 +11,8 @@
 #include <Windows.h>
 #endif
 
+#include "Version.h"
+
 namespace Snake2D
 {
 #if defined(_WIN32)
@@ -33,9 +35,9 @@ namespace Snake2D
     std::string getAppVersion()
     {
         std::stringstream ss{};
-        ss << SNAKE2D_V_MAJOR << '.'
-           << SNAKE2D_V_MINOR << '.'
-           << SNAKE2D_V_PATCH;
+        ss << SNAKE2D_VERSION_MAJOR << '.'
+           << SNAKE2D_VERSION_MINOR << '.'
+           << SNAKE2D_VERSION_PATCH;
         return ss.str();
     }
 

@@ -9,7 +9,6 @@
 #include "common\Common.h"
 #include "common\Point2D.h"
 #include "common\Random.h"
-#include <iostream>
 
 sf::Vector2u getImgSize(const std::string imgName)
 {

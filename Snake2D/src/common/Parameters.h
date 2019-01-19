@@ -5,12 +5,8 @@
 #ifndef PARAMETERS_H
 #define PARAMETERS_H
 
-#define SNAKE2D_V_MAJOR                 1
-#define SNAKE2D_V_MINOR                 0
-#define SNAKE2D_V_PATCH                 0
-
-#define SNAKE2D_IMG_FOLDER              "img\\"
-#define SNAKE2D_FONTS_FOLDER            "fonts\\"
+#define SNAKE2D_IMG_FOLDER              "img/"
+#define SNAKE2D_FONTS_FOLDER            "fonts/"
 
 #define SNAKE2D_LOGO_FILE_NAME          "logo.png"
 #define SNAKE2D_BACKGROUND_FILE_NAME    "background.png"
