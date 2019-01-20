@@ -10,10 +10,22 @@ addons:
     packages:
     - gcc-7
     - g++-7
-    - libsfml-dev
+    - libopenal-dev
+    - libjpeg-dev
+    - libudev-dev
+    - libxrandr-dev
+    - libfreetype6-dev
+    - libvorbis-dev
+    - libflac-dev
 
 before_script:
+- git clone https://github.com/sfml/sfml
+- cd sfml
+- git checkout 2f11710abc5aa478503a7ff3f9e654bd2078ebab
 - mkdir build && cd build
+- cmake .. $CMAKE_FLAGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../install
+- cmake --build . --target install
+- cd ../..
 
 script:
 - export CC=gcc-7
@@ -21,7 +33,8 @@ script:
 - gcc -v
 - g++ -v
 - cmake --version
-- cmake ..
+- mkdir build && cd build
+- cmake .. -DCMAKE_BUILD_TYPE=Release $CMAKE_FLAGS -DSFML_DIR=$TRAVIS_BUILD_DIR/sfml/install/lib/cmake/SFML -DCMAKE_INSTALL_PREFIX=../install
 - cmake --build . --config Release -- -j ${nproc}
 
 branches:
