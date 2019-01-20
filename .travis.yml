@@ -10,6 +10,7 @@ addons:
     packages:
     - gcc-7
     - g++-7
+    - libgl1-mesa-dev
     - libopenal-dev
     - libjpeg-dev
     - libudev-dev
