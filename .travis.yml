@@ -1,0 +1,33 @@
+language: cpp
+dist: xenial
+sudo: false
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-7
+    - g++-7
+    - libsfml-dev
+
+before_script:
+- mkdir build && cd build
+
+script:
+- export CC=gcc-7
+- export CXX=g++-7
+- gcc -v
+- g++ -v
+- cmake --version
+- cmake ..
+- cmake --build . --config Release -- -j ${nproc}
+
+branches:
+  only:
+  - develop
+
+notifications:
+  email:
+  - dreqn1te@gmail.com
