@@ -10,6 +10,7 @@
 #include <Windows.h>
 #elif defined(__linux__)
 #include <unistd.h>
+#include <linux/limits.h>
 #elif defined(__APPLE__)
 #include <mach-o/dyld.h>
 #endif
@@ -36,7 +37,7 @@ namespace Snake2D
 #elif defined(__linux__)
     std::string getExePath()
     {
-        char pathBuffer[MAX_PATH];
+        char pathBuffer[PATH_MAX];
 
         ssize_t bytes_n{
             readlink("/proc/self/exe", pathBuff, PATH_MAX)
@@ -57,7 +58,6 @@ namespace Snake2D
         {
             throw std::runtime_error("GetModuleHandle() returned NULL");
         }
-
         return pathBuffer;
     }
 #endif

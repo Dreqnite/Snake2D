@@ -20,7 +20,7 @@ namespace Snake2D
     int CRandomGenerator::getRandomInt(const int min,
                                              const int max) noexcept
     {
-        const std::uniform_int_distribution<int> uid{min, max};
+        std::uniform_int_distribution<int> uid{min, max};
         return uid(m_generator);
     }
 

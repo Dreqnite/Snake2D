@@ -30,7 +30,7 @@ namespace Snake2D
 
     sf::Sprite CEndgameController::execute(void* args)
     {
-        int score = reinterpret_cast<int>(args);
+        int score = *reinterpret_cast<int*>(args);
 
         m_rendered.clear(sf::Color::Black);
 
