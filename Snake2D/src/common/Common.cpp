@@ -40,7 +40,7 @@ namespace Snake2D
         char pathBuffer[PATH_MAX];
 
         ssize_t bytes_n{
-            readlink("/proc/self/exe", pathBuff, PATH_MAX)
+            readlink("/proc/self/exe", pathBuffer, PATH_MAX)
         };
         if (bytes_n == -1)
         {
