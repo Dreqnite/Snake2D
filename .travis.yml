@@ -1,13 +1,14 @@
 language: cpp
 dist: xenial
 sudo: false
-compiler: gcc
+compiler: g++
 
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
+    - cmake-3.1
     - libgl1-mesa-dev
     - libopenal-dev
     - libjpeg-dev
@@ -16,8 +17,7 @@ addons:
     - libfreetype6-dev
     - libvorbis-dev
     - libflac-dev
-    - gcc-7
-    - g++-7
+    - g++-5.4
 
 install:
 - git clone https://github.com/SFML/SFML.git
@@ -30,6 +30,10 @@ install:
         -DBUILD_SHARED_LIBS=TRUE ..
 - cmake --build . --target install -- -j ${nproc}
 - cd ../../
+- export CXX="g++-5.4"
+
+before_script:
+- g++-5.4 --version
 
 script:
 - mkdir install
