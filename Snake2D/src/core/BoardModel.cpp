@@ -4,7 +4,7 @@
 
 #include "BoardModel.h"
 
-#include "..\common\Parameters.h"
+#include "../common/Parameters.h"
 
 namespace Snake2D
 {

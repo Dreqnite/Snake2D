@@ -2,13 +2,16 @@
 // Distributed under the GNU AGPLv3 software license, see the accompanying
 // file LICENSE or https://choosealicense.com/licenses/agpl-3.0/.
 
-#include "common.h"
+#include "Common.h"
 
 #include <sstream>
-#include <iostream>
 
 #if defined(_WIN32)
 #include <Windows.h>
+#elif defined(__linux__)
+#include <unistd.h>
+#elif defined(__APPLE__)
+#include <mach-o/dyld.h>
 #endif
 
 #include "Version.h"
@@ -25,8 +28,35 @@ namespace Snake2D
         {
             throw std::runtime_error("GetModuleHandle() returned NULL");
         }
-        
+
         GetModuleFileName(hModule, pathBuffer, sizeof(pathBuffer));
+
+        return pathBuffer;
+    }
+#elif defined(__linux__)
+    std::string getExePath()
+    {
+        char pathBuffer[MAX_PATH];
+
+        ssize_t bytes_n{
+            readlink("/proc/self/exe", pathBuff, PATH_MAX)
+        };
+        if (bytes_n == -1)
+        {
+            throw std::runtime_error("readlink() returned -1");
+        }
+        return pathBuffer;
+    }
+#elif defined(__APPLE__)
+    std::string getExePath()
+    {
+        char pathBuffer[MAXPATHLEN];
+
+        uint32_t bufsize = sizeof(pathBuffer);
+        if (_NSGetExecutablePath(pathBuffer, &bufSize) != 0)
+        {
+            throw std::runtime_error("GetModuleHandle() returned NULL");
+        }
 
         return pathBuffer;
     }

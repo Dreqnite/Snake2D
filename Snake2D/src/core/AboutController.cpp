@@ -6,7 +6,7 @@
 
 #include <array>
 
-#include "..\common\Common.h"
+#include "../common/Common.h"
 
 namespace Snake2D
 {

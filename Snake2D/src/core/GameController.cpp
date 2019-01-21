@@ -1,10 +1,9 @@
 #include "GameController.h"
 
 #include <queue>
-#include <iostream>
 
-#include "..\common\Random.h"
-#include "..\common\Common.h"
+#include "../common/Random.h"
+#include "../common/Common.h"
 
 namespace Snake2D
 {
@@ -401,7 +400,6 @@ namespace Snake2D
             }
 
             // Avoids overlapping with snake
-
             std::list<Snake2D::CPoint2D> snake{ m_snakeModel->getLocation() };
 
             auto it = std::find(snake.cbegin(), snake.cend(), randomPoint);

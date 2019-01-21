@@ -6,8 +6,8 @@
 
 #include <iostream>
 
-#include "..\common\Parameters.h"
-#include "..\common\Common.h"
+#include "../common/Parameters.h"
+#include "../common/Common.h"
 
 namespace Snake2D
 {
