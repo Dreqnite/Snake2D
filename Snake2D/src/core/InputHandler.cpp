@@ -5,6 +5,7 @@
 #include "InputHandler.h"
 
 #include <chrono>
+#include <thread>
 
 #include "../common/Parameters.h"
 
