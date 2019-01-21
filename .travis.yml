@@ -21,7 +21,7 @@ addons:
 
 before_script:
 - git clone https://github.com/sfml/sfml
-- cd SFML
+- cd sfml
 - git checkout 2f11710abc5aa478503a7ff3f9e654bd2078ebab
 - mkdir build && cd build
 - cmake .. $CMAKE_FLAGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../install
