@@ -7,7 +7,7 @@
 
 #include <list>
 
-#include "..\common\Point2D.h"
+#include "../common/Point2D.h"
 
 namespace Snake2D
 {

@@ -5,9 +5,9 @@
 #ifndef MAINMENUITEM_H
 #define MAINMENUITEM_H
 
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
-#include "..\common\Parameters.h"
+#include "../common/Parameters.h"
 
 namespace Snake2D
 {

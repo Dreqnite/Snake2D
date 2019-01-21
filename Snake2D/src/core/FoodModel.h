@@ -5,7 +5,7 @@
 #ifndef FOODMODEL_H
 #define FOODMODEL_H
 
-#include "..\common\Point2D.h"
+#include "../common/Point2D.h"
 
 namespace Snake2D
 {

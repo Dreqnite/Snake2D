@@ -9,6 +9,7 @@
 #include <memory>
 
 #include "MainMenuItemModel.h"
+
 namespace Snake2D
 {
     using MainMenuItemPtr = std::unique_ptr<Snake2D::CMainMenuItemModel>;

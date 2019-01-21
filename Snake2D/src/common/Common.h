@@ -5,7 +5,7 @@
 #ifndef COMMON_H
 #define COMMON_H
 
-#include "SFML\Graphics.hpp"
+#include "SFML/Graphics.hpp"
 
 #include "Parameters.h"
 #include "Point2D.h"

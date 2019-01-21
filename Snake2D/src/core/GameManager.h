@@ -5,9 +5,9 @@
 #ifndef GAMEMANAGER_H
 #define GAMEMANAGER_H
 
-#include "SFML\Graphics.hpp"
+#include "SFML/Graphics.hpp"
 
-#include "..\common\Parameters.h"
+#include "../common/Parameters.h"
 #include "GameWindow.h"
 #include "InputHandler.h"
 #include "MainMenuController.h"

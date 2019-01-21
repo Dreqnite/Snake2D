@@ -24,7 +24,7 @@
 
 #include <atomic>
 
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 namespace Snake2D
 {

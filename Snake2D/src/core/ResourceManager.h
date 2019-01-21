@@ -10,9 +10,9 @@
 #include <string>
 #include <stdexcept>
 
-#include "SFML\Graphics.hpp"
+#include "SFML/Graphics.hpp"
 
-#include "..\common\Parameters.h"
+#include "../common/Parameters.h"
 
 namespace Snake2D
 {
