@@ -36,7 +36,7 @@ script:
 - mkdir build && cd build
 - cmake -DCMAKE_INSTALL_PREFIX=../install
         -DCMAKE_BUILD_TYPE=Release
-        -DSFML_DIR=../SFML/install/lib/cmake/SFML ..
+        -DSFML_DIR=$TRAVIS_BUILD_DIR/SFML/install/lib/cmake/SFML ..
 - cmake --build . -- -j ${nproc}
 
 branches:
