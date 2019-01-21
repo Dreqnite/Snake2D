@@ -17,7 +17,7 @@ addons:
     - libfreetype6-dev
     - libvorbis-dev
     - libflac-dev
-    - g++-5.4
+    - g++-6
 
 install:
 - git clone https://github.com/SFML/SFML.git
@@ -30,10 +30,10 @@ install:
         -DBUILD_SHARED_LIBS=TRUE ..
 - cmake --build . --target install -- -j ${nproc}
 - cd ../../
-- export CXX="g++-5.4"
+- export CXX="g++-6"
 
 before_script:
-- g++-5.4 --version
+- g++-6 --version
 
 script:
 - mkdir install
