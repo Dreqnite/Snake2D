@@ -14,9 +14,12 @@
 
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR) 
 
-project(Snake2D VERSION 0.8.0 LANGUAGES CXX)
+project(Snake2D VERSION 0.8.0)
 
 set(CMAKE_CXX_STARDARD 14)
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+endif()
 
 find_package(SFML 2.5.1 REQUIRED 
   COMPONENTS system window graphics
@@ -28,6 +31,7 @@ configure_file(
   "${PROJECT_BASE}/Snake2D/src/common/Version.h.in" 
   "${PROJECT_BASE}/Snake2D/src/common/Version.h"
 )
+
 set(SNAKE2D_SOURCES 
   "Snake2D/src/main.cpp"
   "Snake2D/src/common/Common.cpp"
