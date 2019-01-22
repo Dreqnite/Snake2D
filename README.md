@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Dreqnite/Snake2D.svg?branch=develop)](https://travis-ci.org/Dreqnite/Snake2D)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 # Snake2D
 A simple Snake2D game written with usage of C++ and SFML
 ## General information
